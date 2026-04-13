@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import {
   GraduationCap, BookOpen, FlaskConical, Award, Mail, Github, Linkedin,
   ExternalLink, MapPin, Calendar, Download, Menu, X, ChevronDown, Quote,
-  Twitter, Globe, FileText, Star, Users, BarChart2, BookMarked
+  Twitter, Globe, FileText, Star, Users, BarChart2, BookMarked, Briefcase
 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -42,9 +42,26 @@ const navLinks = [
   { id: 'about', label: 'About' },
   { id: 'research', label: 'Research' },
   { id: 'publications', label: 'Publications' },
+  { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
   { id: 'awards', label: 'Awards' },
   { id: 'contact', label: 'Contact' },
+]
+
+const workExperience = [
+  {
+    title: 'AI Algorithm Engineer (Team Leader)',
+    institution: 'Huawei Technology Co., Ltd.',
+    location: 'Shenzhen, China',
+    period: 'Apr 2021 – Jun 2023',
+    description: 'Site AI Group, Embedding Software Competence Center',
+    highlights: [
+      'Led the AI team to explore the third wave of AI: AI systems should acquire human-like communication and reasoning capabilities. Studied knowledge-driven and data-driven techniques including cognition intelligence, neural symbolic AI, causal learning, reinforcement learning, and autonomous system.',
+      'Implemented knowledge graph, causal reasoning model, rule engine, and knowledge fusion neural networks on embedded communication scenarios (e.g., routers, 5G base stations).',
+      'Explored trustworthy AI techniques including adversarial attack and defense, robustness estimation, and explainability.',
+      'Deployed Huawei Ascend series AI processors and programmed Neural Networks under Huawei Atlas AI computing. Delivered SVM classifiers and increased training performance 200% over Sklearn.',
+    ],
+  },
 ]
 
 const education = [
@@ -483,6 +500,52 @@ function Research() {
 }
 
 // ─────────────────────────────────────────────
+// EXPERIENCE
+// ─────────────────────────────────────────────
+
+function Experience() {
+  return (
+    <Section id="experience" className="py-20 bg-zinc-50">
+      <div className="max-w-5xl mx-auto px-6">
+        <SectionTitle icon={Briefcase}>Work Experience</SectionTitle>
+        <div className="space-y-8">
+          {workExperience.map((exp, idx) => (
+            <Card key={idx} className="border-0 shadow-md">
+              <CardHeader>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                  <div>
+                    <CardTitle className="text-xl">{exp.title}</CardTitle>
+                    <p className="text-zinc-600 mt-1">{exp.institution}</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-zinc-500">
+                    <MapPin size={14} />
+                    <span>{exp.location}</span>
+                    <span className="mx-2">·</span>
+                    <Calendar size={14} />
+                    <span>{exp.period}</span>
+                  </div>
+                </div>
+                <p className="text-sm text-zinc-500 mt-2">{exp.description}</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {exp.highlights.map((highlight, hIdx) => (
+                    <li key={hIdx} className="flex items-start gap-3 text-sm text-zinc-600">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </Section>
+  )
+}
+
+// ─────────────────────────────────────────────
 // PUBLICATIONS
 // ─────────────────────────────────────────────
 
@@ -769,6 +832,7 @@ export default function App() {
       <Hero />
       <Research />
       <Publications />
+      <Experience />
       <Education />
       <Awards />
       <Contact />
