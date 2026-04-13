@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import './App.css'
+import Avatar from '/avatar.png'
 
 // ─────────────────────────────────────────────
 // DATA
@@ -19,7 +20,7 @@ const profile = {
   department: 'School of Data Science',
   university: 'The Chinese University of Hong Kong, Shenzhen',
   location: 'Shenzhen, China',
-  email: 'wren44@gatech.edu',
+  email: 'wendiren@link.cuhk.edu.cn',
   github: 'https://github.com/conniemessi',
   linkedin: 'https://linkedin.com/in/WendiRen',
   // twitter: 'https://twitter.com/WendiRen',
@@ -30,8 +31,8 @@ const profile = {
 Prior to my PhD, I earned my M.S. in Computational Science & Engineering from Georgia Institute of Technology (College of Computing, GPA: 3.8/4.0) and B.Eng. in Computer Science from Sun Yat-sen University. I also worked as an AI Algorithm Engineer (Team Leader) at Huawei, leading research on the third wave of AI for autonomous driving networks.`,
   researchInterests: ['Neuro-Symbolic AI', 'Causal Reasoning', 'Weak Supervision', 'Point Processes', 'Knowledge-Driven AI'],
   stats: [
-    { label: 'Publications', value: '9', icon: BookOpen },
-    { label: 'Citations', value: '400+', icon: Quote },
+    { label: 'Publications', value: '10+', icon: BookOpen },
+    { label: 'Citations', value: '500+', icon: Quote },
     { label: 'Top Venues', value: 'ICLR, NeurIPS, ICML, UAI, EMNLP', icon: BarChart2 },
     { label: 'Reviewer', value: 'ICLR, NeurIPS, ICML, KDD, UAI, ACL', icon: Users },
   ]
@@ -420,7 +421,7 @@ function Hero() {
           <div className="flex flex-col items-center gap-4 animate-fade-in">
             <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
               <img 
-                src="/avatar.png" 
+                src={Avatar} 
                 alt={profile.name}
                 className="w-full h-full object-cover"
               />
