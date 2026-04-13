@@ -23,7 +23,7 @@ const profile = {
   email: 'wendiren@link.cuhk.edu.cn',
   github: 'https://github.com/conniemessi',
   linkedin: 'https://linkedin.com/in/WendiRen',
-  // twitter: 'https://twitter.com/WendiRen',
+  twitter: '',
   googleScholar: 'https://scholar.google.com/citations?user=V0vQt1YAAAAJ&hl=zh-CN',
   website: '#',
   bio: `I am a Ph.D. candidate in Computer Science at The Chinese University of Hong Kong, Shenzhen, advised by Prof. Shuang Li. My research focuses on neuro-symbolic AI, causal reasoning, and weak supervision — bridging data-driven and knowledge-driven paradigms to build more robust and interpretable intelligent systems.
@@ -399,9 +399,11 @@ function Hero() {
               <Button variant="ghost" size="icon" className="w-9 h-9" asChild>
                 <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={17} /></a>
               </Button>
-              <Button variant="ghost" size="icon" className="w-9 h-9" asChild>
-                <a href={profile.twitter} target="_blank" rel="noreferrer"><Twitter size={17} /></a>
-              </Button>
+              {profile.twitter && (
+                <Button variant="ghost" size="icon" className="w-9 h-9" asChild>
+                  <a href={profile.twitter} target="_blank" rel="noreferrer"><Twitter size={17} /></a>
+                </Button>
+              )}
               <Button variant="ghost" size="icon" className="w-9 h-9" asChild>
                 <a href={profile.googleScholar} target="_blank" rel="noreferrer"><Globe size={17} /></a>
               </Button>
@@ -748,7 +750,7 @@ function Footer() {
         <div className="flex items-center gap-4">
           <a href={profile.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github size={16} /></a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Linkedin size={16} /></a>
-          <a href={profile.twitter} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Twitter size={16} /></a>
+          {profile.twitter && <a href={profile.twitter} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Twitter size={16} /></a>}
           <a href={`mailto:${profile.email}`} className="hover:text-white transition-colors"><Mail size={16} /></a>
         </div>
       </div>
