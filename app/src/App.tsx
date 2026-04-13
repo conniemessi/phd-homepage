@@ -32,8 +32,8 @@ Prior to my PhD, I earned my M.S. in Computational Science & Engineering from Ge
   stats: [
     { label: 'Publications', value: '9', icon: BookOpen },
     { label: 'Citations', value: '400+', icon: Quote },
-    { label: 'Top Venues', value: 'ICLR×2, NeurIPS, EMNLP', icon: BarChart2 },
-    { label: 'Reviewer', value: 'KDD, CIKM, ACL, ICLR', icon: Users },
+    { label: 'Top Venues', value: 'ICLR, NeurIPS, ICML, UAI, EMNLP', icon: BarChart2 },
+    { label: 'Reviewer', value: 'ICLR, NeurIPS, ICML, KDD, UAI, ACL', icon: Users },
   ]
 }
 

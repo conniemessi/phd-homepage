@@ -15,9 +15,9 @@
 - **Stack**: React + TypeScript + Vite + Tailwind CSS + shadcn/ui
 - **Design**: Monochrome + blue accent, Inter + Playfair Display, scroll animations
 - **Deploy**: GitHub Pages → https://conniemessi.github.io/phd-homepage/
-- **Repo**: github.com/WendiRen/phd-homepage
+- **Repo**: github.com/conniemessi/phd-homepage
 - **Data location**: App.tsx top-level constants (profile, education, publications, research, awards)
 
 ## Preferences
-- Language: Chinese (中文)
+- Language: Chinese, English
 - Git config: user.name=Wendi Ren, email=conniemessi@163.com
