@@ -20,10 +20,10 @@ const profile = {
   university: 'The Chinese University of Hong Kong, Shenzhen',
   location: 'Shenzhen, China',
   email: 'wren44@gatech.edu',
-  github: 'https://github.com/WendiRen',
+  github: 'https://github.com/conniemessi',
   linkedin: 'https://linkedin.com/in/WendiRen',
-  twitter: 'https://twitter.com/WendiRen',
-  googleScholar: 'https://scholar.google.com',
+  // twitter: 'https://twitter.com/WendiRen',
+  googleScholar: 'https://scholar.google.com/citations?user=V0vQt1YAAAAJ&hl=zh-CN',
   website: '#',
   bio: `I am a Ph.D. candidate in Computer Science at The Chinese University of Hong Kong, Shenzhen, advised by Prof. Shuang Li. My research focuses on neuro-symbolic AI, causal reasoning, and weak supervision — bridging data-driven and knowledge-driven paradigms to build more robust and interpretable intelligent systems.
 
@@ -418,10 +418,12 @@ function Hero() {
           </div>
           {/* Avatar */}
           <div className="flex flex-col items-center gap-4 animate-fade-in">
-            <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-white shadow-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-              <span className="font-serif text-6xl font-bold text-blue-700 select-none">
-                {profile.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-              </span>
+            <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
+              <img 
+                src="/avatar.png" 
+                alt={profile.name}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-center">
               <p className="text-sm text-zinc-500 flex items-center gap-1 justify-center">
@@ -717,7 +719,7 @@ function Contact() {
                 'Research collaborations in neuro-symbolic AI & causal reasoning',
                 'Academic visits & exchange programs',
                 'Invited talks & paper discussions',
-                'Reviewing for KDD, CIKM, ACL, ICLR',
+                'Reviewing for ICLR, NeurIPS, ICML',
                 'Industry research internships',
               ].map(item => (
                 <li key={item} className="flex items-start gap-2.5">
