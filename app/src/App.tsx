@@ -76,7 +76,12 @@ const education = [
   },
 ]
 
-const publications = [
+type PubLinks = { paper?: string; code?: string; demo?: string }
+
+const publications: Array<{
+  title: string; authors: string; venue: string; year: number; type: string;
+  highlight: boolean; abstract: string; tags: string[]; links: PubLinks; citations: number
+}> = [
   {
     title: 'Logic-Logit: A Logic-Based Approach to Choice Modeling',
     authors: 'S. Zhang, W. Ren, S. Li',
