@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import {
   GraduationCap, BookOpen, FlaskConical, Award, Mail, Github, Linkedin,
   ExternalLink, MapPin, Calendar, Download, Menu, X, ChevronDown, Quote,
-  Twitter, Globe, FileText, Star, Users, BarChart2, BookMarked, Briefcase
+  Twitter, Globe, FileText, Star, Users, BarChart2, BookMarked, Briefcase, Newspaper
 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -286,7 +286,28 @@ const research = [
   },
 ]
 
+const news = [
+  {
+    date: 'May 2026',
+    text: 'Recognized as an ICML 2026 Gold Reviewer.',
+  },
+  {
+    date: 'May 2026',
+    text: '2 papers accepted to ICML 2026.',
+  },
+  {
+    date: 'Jan 2026',
+    text: '3 papers accepted to ICLR 2026.',
+  },
+]
+
 const awards = [
+  {
+    title: 'ICML 2026 Gold Reviewer',
+    organization: 'International Conference on Machine Learning (ICML)',
+    year: 'May 2026',
+    description: 'Recognized for outstanding service as a program committee reviewer.',
+  },
   {
     title: 'Huawei Future Star Award',
     organization: 'Huawei Technologies',
@@ -461,9 +482,24 @@ function Hero() {
               <span>{profile.location}</span>
             </div>
             {/* Bio */}
-            <p className="text-zinc-600 leading-relaxed max-w-2xl mb-8 text-base whitespace-pre-line">
+            <p className="text-zinc-600 leading-relaxed max-w-2xl mb-6 text-base whitespace-pre-line">
               {profile.bio.split('\n\n')[0]}
             </p>
+            {/* News */}
+            <div className="mb-8 max-w-2xl rounded-xl border border-blue-100 bg-blue-50/50 p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <Newspaper size={16} className="text-blue-600" />
+                <h2 className="text-sm font-semibold text-zinc-900">News</h2>
+              </div>
+              <ul className="space-y-2.5">
+                {news.map((item, i) => (
+                  <li key={i} className="flex gap-3 text-sm leading-snug">
+                    <span className="shrink-0 w-[4.5rem] font-medium text-zinc-400 tabular-nums">{item.date}</span>
+                    <span className="text-zinc-700">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             {/* Actions */}
             <div className="flex flex-wrap gap-3 mb-10">
               <Button className="gap-2 bg-zinc-900 hover:bg-zinc-700" asChild>
