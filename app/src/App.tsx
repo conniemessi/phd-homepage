@@ -18,17 +18,19 @@ const profile = {
   name: 'Wendi Ren',
   title: 'Ph.D. Candidate in Computer Science',
   department: 'School of Data Science',
-  university: 'The Chinese University of Hong Kong, Shenzhen',
+  university: 'The Chinese University of Hong Kong, Shenzhen (CUHK-SZ)',
   location: 'Shenzhen, China',
   email: 'wendiren@link.cuhk.edu.cn',
   github: 'https://github.com/conniemessi',
   linkedin: 'https://linkedin.com/in/WendiRen',
   twitter: '',
   googleScholar: 'https://scholar.google.com/citations?user=V0vQt1YAAAAJ&hl=zh-CN',
-  website: '#',
-  bio: `I am a Ph.D. candidate in Computer Science at The Chinese University of Hong Kong, Shenzhen, advised by Prof. Shuang Li. My research focuses on neuro-symbolic AI, causal reasoning, and weak supervision — bridging data-driven and knowledge-driven paradigms to build more robust and interpretable intelligent systems.
+  website: 'https://conniemessi.github.io/phd-homepage/',
+  cv: `${import.meta.env.BASE_URL}Resume_WendiRen_2026.pdf`,
+  cvDownloadName: 'WendiRen_CV_2026.pdf',
+  bio: `I am Wendi Ren, a Ph.D. candidate in Computer Science at The Chinese University of Hong Kong, Shenzhen (CUHKSZ), advised by Prof. Shuang Li. My research focuses on neuro-symbolic AI, causal reasoning, and weak supervision — bridging data-driven and knowledge-driven paradigms to build more robust and interpretable intelligent systems.
 
-Prior to my PhD, I earned my M.S. in Computational Science & Engineering from Georgia Institute of Technology (College of Computing, GPA: 3.8/4.0) and B.Eng. in Computer Science from Sun Yat-sen University. I also worked as an AI Algorithm Engineer (Team Leader) at Huawei, leading research on the third wave of AI for autonomous driving networks.`,
+Prior to my PhD at CUHKSZ, I earned my M.S. in Computational Science & Engineering from Georgia Institute of Technology (College of Computing, GPA: 3.8/4.0) and B.Eng. in Computer Science from Sun Yat-sen University. I also worked as an AI Algorithm Engineer (Team Leader) at Huawei, leading research on the third wave of AI for autonomous driving networks.`,
   researchInterests: ['Neuro-Symbolic AI', 'Causal Reasoning', 'Weak Supervision', 'Point Processes', 'Knowledge-Driven AI'],
   stats: [
     { label: 'Publications', value: '10+', icon: BookOpen },
@@ -67,11 +69,11 @@ const workExperience = [
 const education = [
   {
     degree: 'Ph.D. in Computer Science',
-    institution: 'The Chinese University of Hong Kong, Shenzhen',
+    institution: 'The Chinese University of Hong Kong, Shenzhen (CUHKSZ)',
     location: 'Shenzhen, China',
     period: 'Aug 2023 – Present',
     advisor: 'Prof. Shuang Li',
-    description: 'Research on neuro-symbolic AI, causal reasoning in point processes, and AI-enhanced intelligent diagnosis. One paper accepted to ICLR 2025; one paper accepted to NeurIPS 2024.',
+    description: 'Research on neuro-symbolic AI, causal reasoning in point processes, and AI-enhanced intelligent diagnosis at CUHK-Shenzhen (CUHKSZ). One paper accepted to ICLR 2025; one paper accepted to NeurIPS 2024.',
     logo: '🎓',
   },
   {
@@ -99,6 +101,66 @@ const publications: Array<{
   title: string; authors: string; venue: string; year: number; type: string;
   highlight: boolean; abstract: string; tags: string[]; links: PubLinks; citations: number
 }> = [
+  {
+    title: 'Forward-Chaining Temporal Point Process',
+    authors: 'C. Yang, W. Ren, S. Li',
+    venue: 'ICML 2026',
+    year: 2026,
+    type: 'Conference',
+    highlight: true,
+    abstract: 'Introduces a forward-chaining framework for temporal point processes, enabling efficient modeling and prediction of event sequences in continuous time.',
+    tags: ['Point Processes', 'Temporal Modeling', 'Causal Inference'],
+    links: { paper: '#' },
+    citations: 0,
+  },
+  {
+    title: 'Beyond Accuracy: Latent Perturbations for Cognitive-Aware Diagnosis',
+    authors: 'Y. Yan, Y. Fu, W. Ren, H. Gao, S. Li',
+    venue: 'ICML 2026',
+    year: 2026,
+    type: 'Conference',
+    highlight: false,
+    abstract: 'Proposes latent perturbations to move beyond accuracy-centric metrics, supporting cognitive-aware diagnosis with more clinically meaningful evaluation.',
+    tags: ['Healthcare AI', 'Intelligent Diagnosis', 'Latent Representations'],
+    links: { paper: '#' },
+    citations: 0,
+  },
+  {
+    title: 'Learning Human Habits with Rule-Guided Active Inference',
+    authors: 'Z. Gong, C. Yang, W. Ren, S. Li',
+    venue: 'ICLR 2026',
+    year: 2026,
+    type: 'Conference',
+    highlight: true,
+    abstract: 'Combines symbolic rules with active inference to learn and model human habitual behavior in an interpretable, knowledge-guided manner.',
+    tags: ['Active Inference', 'Rule Learning', 'Neuro-Symbolic AI'],
+    links: { paper: '#' },
+    citations: 0,
+  },
+  {
+    title: 'Inferring the Invisible: Neuro-Symbolic Rule Discovery for Missing Value Imputation',
+    authors: 'W. Ren, K. Wan, J. Leng, S. Li',
+    venue: 'ICLR 2026',
+    year: 2026,
+    type: 'Conference',
+    highlight: true,
+    abstract: 'A neuro-symbolic approach that discovers interpretable rules to impute missing values by inferring latent structure in incomplete data.',
+    tags: ['Neuro-Symbolic AI', 'Rule Discovery', 'Missing Data'],
+    links: { paper: '#' },
+    citations: 0,
+  },
+  {
+    title: 'Sampling Complexity of TD and PPO in RKHS',
+    authors: 'L. Zou, W. Ren, W. Zhang, L. Ding, S. Li',
+    venue: 'ICLR 2026',
+    year: 2026,
+    type: 'Conference',
+    highlight: false,
+    abstract: 'Analyzes the sampling complexity of temporal-difference learning and proximal policy optimization when function approximation is performed in reproducing kernel Hilbert spaces.',
+    tags: ['Reinforcement Learning', 'RKHS', 'Theory'],
+    links: { paper: '#' },
+    citations: 0,
+  },
   {
     title: 'Logic-Logit: A Logic-Based Approach to Choice Modeling',
     authors: 'S. Zhang, W. Ren, S. Li',
@@ -348,7 +410,7 @@ function Navbar() {
             </a>
           ))}
           <Button size="sm" variant="outline" className="gap-1.5 text-xs" asChild>
-            <a href="#" download>
+            <a href={profile.cv} download={profile.cvDownloadName}>
               <Download size={13} /> CV
             </a>
           </Button>
@@ -408,7 +470,9 @@ function Hero() {
                 <a href={`mailto:${profile.email}`}><Mail size={15} /> Contact Me</a>
               </Button>
               <Button variant="outline" className="gap-2" asChild>
-                <a href="#" download><Download size={15} /> Download CV</a>
+                <a href={profile.cv} download={profile.cvDownloadName}>
+                  <Download size={15} /> Download CV
+                </a>
               </Button>
               <Button variant="ghost" size="icon" className="w-9 h-9" asChild>
                 <a href={profile.github} target="_blank" rel="noreferrer"><Github size={17} /></a>
